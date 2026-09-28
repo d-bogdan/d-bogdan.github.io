@@ -106,8 +106,8 @@
    RESPONSIVE MEDIA QUERIES
    ========================================== */
 
-/* --- Tablet View (768px to 1024px) --- */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+/* --- Tablet View (769px to 1024px) --- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     /* Stack top container vertically for tablet screens */
     .container1 {
         display: flex;
@@ -133,8 +133,8 @@
     }
 }
 
-/* --- Large Mobile View (375px to 768px) --- */
-@media screen and (min-width: 375px) and (max-width: 768px) {
+/* --- Large Mobile View (376px to 768px) --- */
+@media screen and (min-width: 376px) and (max-width: 768px) {
     .container1 {
         display: flex;
         flex-direction: column;
