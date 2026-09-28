@@ -42,8 +42,8 @@ a:hover {
    RESPONSIVE MEDIA QUERIES
    ========================================== */
 
-/* --- Tablet & Smaller Screens (Up to 1024px) --- */
-@media screen and (max-width: 1024px){
+/* --- Tablet & Smaller Screens (From 376 px Up to 1024px) --- */
+@media screen and (min-width: 376px) and (max-width: 1024px){
     /* Stack name and navigation items vertically */
     .navbar {
         display: flex;
