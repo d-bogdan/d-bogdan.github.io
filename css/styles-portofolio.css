@@ -115,16 +115,16 @@
    RESPONSIVE MEDIA QUERIES
    ========================================== */
 
-/* --- Tablet / Medium View (768px to 1024px) --- */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+/* --- Tablet / Medium View (769px to 1024px) --- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr); /* Redraws the layout smoothly to 2 columns */
         column-gap: 20px;
     }
 }
 
-/* --- Mobile View (375px to 768px) --- */
-@media screen and (min-width: 375px) and (max-width: 768px) {
+/* --- Mobile View (376px to 768px) --- */
+@media screen and (min-width: 376px) and (max-width: 768px) {
     .portfolio-grid {
         grid-template-columns: 1fr; /* Stacks all 5 projects into a single linear view */
         row-gap: 25px;
