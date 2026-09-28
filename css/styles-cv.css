@@ -1,0 +1,225 @@
+/* ==========================================
+   HEADER / TOP CONTAINER LAYOUT
+   ========================================== */
+
+/* Main header container using grid for two-column alignment */
+.container1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Aligns profile photo to the far right within the grid */
+.cv-photo {
+    display: flex;
+    justify-self: flex-end;
+}
+.desc {
+    display: flex;             
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;  
+    font-size: 200%;
+    margin-bottom: 10px;
+}
+
+.text {
+    margin: 0;                 
+    padding: 0;                
+    line-height: 1.2;
+}
+
+/* Hidden by default on desktop view */
+.buttons {
+    display: none;
+}
+/* Contact bar displaying links horizontally */
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: lightgrey;
+}
+
+/* ==========================================
+   CV MAIN BODY LAYOUT & SECTIONS
+   ========================================== */
+
+/* Two-column grid container for main CV content */
+.cv-main-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    column-gap: 40px;               
+    padding: 20px;
+    font-family: Arial, sans-serif; 
+}
+
+/* Section titles inside CV columns */
+.cv-section h2 {
+    font-size: 1.2rem;
+    margin: 20px 0 0 0;
+    letter-spacing: 0.5px;
+}
+
+/* Divider line under section headings */
+.cv-section hr {
+    border: none;
+    border-top: 1px solid #333;   
+    margin: 3px 0 10px 0;
+}
+
+.entry {
+    margin-bottom: 12px;
+}
+
+.entry p, .availability-text {
+    margin: 0;
+    line-height: 1.3;
+    font-size: 0.95rem;
+}
+
+.job-meta, .edu-meta, .volunteer-meta {
+    color: #444;
+    font-size: 0.9rem;
+    margin-bottom: 4px !important;
+}
+
+.cv-section ul {
+    margin: 0;
+    padding-left: 20px; 
+}           
+
+.cv-section li {
+    margin-bottom: 4px;
+    line-height: 1.3;
+    font-size: 0.95rem;
+}
+
+/* Utility class to strip default bullet points and indentation */
+.plain-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================== */
+
+/* --- Tablet View (768px to 1024px) --- */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Stack top container vertically for tablet screens */
+    .container1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    /* Switch main CV body to single-column layout */
+    .cv-main-layout {
+        display: grid;
+        grid-template-columns: 1fr; 
+        column-gap: 40px;               
+        padding: 20px;
+        font-family: Arial, sans-serif; 
+    }
+    /* Center header text */
+    .text {
+        text-align: center;
+        margin: 0;                 
+        padding: 0;                
+        line-height: 1.2;
+    }
+}
+
+/* --- Large Mobile View (375px to 768px) --- */
+@media screen and (min-width: 375px) and (max-width: 768px) {
+    .container1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .cv-main-layout {
+        display: grid;
+        grid-template-columns: 1fr; 
+        column-gap: 40px;               
+        padding: 20px;
+        font-family: Arial, sans-serif; 
+    }
+    .text {
+        text-align: center;
+        margin: 0;                 
+        padding: 0;                
+        line-height: 1.2;
+    }
+    /* Stack contact bar items vertically */
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgrey;
+    }
+}
+
+/* --- Small Mobile View (Up to 375px) --- */
+@media screen and (max-width: 375px) {
+    .container1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .cv-main-layout {
+        display: grid;
+        grid-template-columns: 1fr; 
+        column-gap: 40px;               
+        padding: 20px;
+        font-family: Arial, sans-serif; 
+    }
+    .text {
+        text-align: center;
+        margin: 0;                 
+        padding: 0;                
+        line-height: 1.2;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgrey;
+    }
+    /* Enable smooth scrolling for jump links */
+    html {
+        scroll-behavior: smooth;
+    }
+    /* Mobile quick-navigation button container */
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    /* Mobile quick-navigation button container */
+    .scroll-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: lightgray; 
+        color: black; 
+        text-decoration: none; 
+        font-family: Arial;
+        font-weight: bold;
+        border-radius: 6px; /* Rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        transition: all 0.3s ease; /* Makes the hover effect smooth */
+    }
+    .scroll-button:hover {
+        background-color: lightblue;
+    }
+}

@@ -1,0 +1,94 @@
+/* Individual list items inside navigation menu */
+.navbar li {
+    list-style: none;
+    display: inline;
+    margin-right: 10px;
+    font-size: 150%;
+    padding: 10px;
+    
+}
+
+/* Remove default browser body margins and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+/* Navigation container flexbox layout (aligns title to left, menu links to right) */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+}
+
+#name {
+    margin-right: auto;        
+    color: white;
+    font-size: 150%;
+    padding: 10px;
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================== */
+
+/* --- Tablet & Smaller Screens (Up to 1024px) --- */
+@media screen and (max-width: 1024px){
+    /* Stack name and navigation items vertically */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+    /* Center name and clear automatic right margin */
+    #name {
+        text-align: center;
+        margin: 0;   
+        color: white;
+        font-size: 150%;
+        padding: 10px;
+    }
+}
+
+/* --- Mobile View (Up to 375px) --- */
+@media screen and (max-width: 375px){
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+    #name {
+        text-align: center;
+        margin: 0;   
+        color: white;
+        font-size: 150%;
+        padding: 10px;
+    }
+    /* Stack navigation links vertically and clear default list padding/margin */
+    .navbar ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+    }
+    /* Clear horizontal spacing between list items for vertical layout */
+    .navbar li {
+        margin-right: 0px;
+    }
+}
